@@ -4,5 +4,12 @@
 
 
 {% block content %}
-<h1 class="container"><a href="{% url 'logout'%}">Log Out {{user.username}}</a></h1>
+<div class="container my-5 p-5 content_wrapper">
+    <div class="searchform">
+        <form action="" method="post" class="d-flex">
+            <input class="form-control" type="text" name="search" id="search" placeholder="Search for a project...">
+            <button class="btn btn-primary" type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </div>
+</div>
 {% endblock %}

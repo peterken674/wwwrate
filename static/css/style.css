@@ -10,7 +10,7 @@ html, * {
 
 body {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #F7F5F4;
 }
 
 a {
@@ -69,5 +69,66 @@ a:hover {
   border: 1px solid #C66085;
   text-transform: uppercase;
   border-radius: 0;
+}
+
+nav {
+  background-color: #C66085;
+  height: 80px;
+}
+
+nav .nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav .nav-wrapper .logo a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Rum Raisin', cursive;
+  font-size: 3rem;
+}
+
+nav .nav-wrapper .menu {
+  color: white;
+}
+
+nav .nav-wrapper .menu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav-wrapper .menu ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content_wrapper {
+  background-color: white;
+}
+
+.content_wrapper .searchform form * {
+  border-radius: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content_wrapper .searchform form .btn {
+  background-color: #C66085;
+  border: 1px solid #C66085;
+  outline: none;
+}
+
+.content_wrapper .searchform form input {
+  outline: none;
+  border: 1px solid #C66085;
 }
 /*# sourceMappingURL=style.css.map */
