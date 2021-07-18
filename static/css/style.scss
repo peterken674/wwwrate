@@ -103,3 +103,92 @@ nav{
         }
     }
 }
+
+.single_project{
+    min-height: 200px;
+    width: 30%;
+    .thumbnail{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .project_name{
+            background-color: $primary-color;
+            width: 100%;
+            bottom: 0;
+            height: 50px;
+            padding-left: .5rem;
+            padding-top: .5rem;
+            transition: 300ms;
+            *{
+                display: none;
+            }
+            p.name{  
+                display: block;
+                color: white;
+                font-weight: 600;
+                line-height: 1;
+            }
+        }
+        &:hover{
+            .project_name{
+                background: linear-gradient(0deg, $primary-color, $primary-color, transparent);
+                width: 100%;
+                bottom: 0;
+                height: 100%;
+                padding-left: .5rem;
+                padding-top: .5rem;
+
+                * {
+                    display: block;
+                }
+
+                .rating,
+                .name {
+                    color: white;
+                    font-weight: 600;
+                    line-height: 1;
+                    font-size: 1.5rem;
+                    margin-top: 1rem;
+                }
+
+                .rating {
+                    font-size: 3rem;
+                    font-weight: 900;
+                    margin-top: 15%;
+                }
+
+                .stars {
+                    display: flex;
+                    color: white;
+                }
+
+                .description {
+                    color: white;
+                }
+            }
+        }
+    }
+    .posted_by{
+        .profilepic{
+            height: 45px;
+            width: 45px;
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .username{
+            .fullname{
+                font-weight: 600;
+            }
+        }
+    }
+    
+}

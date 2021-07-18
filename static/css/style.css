@@ -131,4 +131,101 @@ nav .nav-wrapper .menu ul li a {
   outline: none;
   border: 1px solid #C66085;
 }
+
+.single_project {
+  min-height: 200px;
+  width: 30%;
+}
+
+.single_project .thumbnail {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.single_project .thumbnail img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.single_project .thumbnail .project_name {
+  background-color: #C66085;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  padding-left: .5rem;
+  padding-top: .5rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.single_project .thumbnail .project_name * {
+  display: none;
+}
+
+.single_project .thumbnail .project_name p.name {
+  display: block;
+  color: white;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.single_project .thumbnail:hover .project_name {
+  background: -webkit-gradient(linear, left bottom, left top, from(#C66085), color-stop(#C66085), to(transparent));
+  background: linear-gradient(0deg, #C66085, #C66085, transparent);
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  padding-left: .5rem;
+  padding-top: .5rem;
+}
+
+.single_project .thumbnail:hover .project_name * {
+  display: block;
+}
+
+.single_project .thumbnail:hover .project_name .rating,
+.single_project .thumbnail:hover .project_name .name {
+  color: white;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.single_project .thumbnail:hover .project_name .rating {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 15%;
+}
+
+.single_project .thumbnail:hover .project_name .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+.single_project .thumbnail:hover .project_name .description {
+  color: white;
+}
+
+.single_project .posted_by .profilepic {
+  height: 45px;
+  width: 45px;
+  overflow: hidden;
+}
+
+.single_project .posted_by .profilepic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.single_project .posted_by .username .fullname {
+  font-weight: 600;
+}
 /*# sourceMappingURL=style.css.map */
