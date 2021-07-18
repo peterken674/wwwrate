@@ -2,6 +2,7 @@
 {% load static %}
 {% load bootstrap5 %}
 
+
 {% block content %}
-<h1 class="container">Hello</h1>
+<h1 class="container"><a href="{% url 'logout'%}">Log Out {{user.username}}</a></h1>
 {% endblock %}

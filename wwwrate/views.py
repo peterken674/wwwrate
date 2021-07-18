@@ -27,7 +27,7 @@ def login_user(request):
                 messages.info(request, 'Username or password is incorrect.')
 
     context = {}
-    return render(request, 'auth/login.html', context)
+    return render(request, 'registration/login.html', context)
 
 def register_user(request):
     if request.user.is_authenticated:
@@ -44,4 +44,8 @@ def register_user(request):
                 return redirect('login')
 
     context = {'form': form, 'title': title}
-    return render(request, 'auth/register.html', context)
+    return render(request, 'registration/register.html', context)
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')

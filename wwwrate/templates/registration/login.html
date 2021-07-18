@@ -1,4 +1,4 @@
-{% extends 'auth/base.html' %}
+{% extends 'registration/base.html' %}
 {% load bootstrap5 %}
 {% load static %}
 
@@ -17,7 +17,7 @@
     <div class="input_field">
         <input class="input" type="password" name="password" id="password" placeholder="Password" required>
     </div>
-    <button class="btn btn-primary w-100">Sign In</button>
+    <button type="submit" class="btn btn-primary w-100">Sign In</button>
     <p class="my-4">Don't have an account? <a href="{% url 'register'%}">Sign Up</a></p>
 </form>
 
