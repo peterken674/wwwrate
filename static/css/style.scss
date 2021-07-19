@@ -110,9 +110,16 @@ nav{
     }
 }
 
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .single_project{
     min-height: 200px;
     width: 30%;
+    min-width: 200px;
     .thumbnail{
         height: 100%;
         width: 100%;
@@ -133,11 +140,12 @@ nav{
             *{
                 display: none;
             }
-            p.name{  
+            .name{  
                 display: block;
                 color: white;
                 font-weight: 600;
                 line-height: 1;
+                text-decoration: none;
             }
         }
         &:hover{
@@ -160,6 +168,7 @@ nav{
                     line-height: 1;
                     font-size: 1.5rem;
                     margin-top: 1rem;
+                    cursor: pointer;
                 }
 
                 .rating {

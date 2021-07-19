@@ -138,9 +138,21 @@ nav .nav-wrapper .menu ul li a {
   border: 1px solid #C66085;
 }
 
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .single_project {
   min-height: 200px;
   width: 30%;
+  min-width: 200px;
 }
 
 .single_project .thumbnail {
@@ -171,11 +183,12 @@ nav .nav-wrapper .menu ul li a {
   display: none;
 }
 
-.single_project .thumbnail .project_name p.name {
+.single_project .thumbnail .project_name .name {
   display: block;
   color: white;
   font-weight: 600;
   line-height: 1;
+  text-decoration: none;
 }
 
 .single_project .thumbnail:hover .project_name {
@@ -199,6 +212,7 @@ nav .nav-wrapper .menu ul li a {
   line-height: 1;
   font-size: 1.5rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .single_project .thumbnail:hover .project_name .rating {

@@ -27,6 +27,8 @@ class Project(models.Model):
     description = models.TextField(max_length=500)
     screenshot = CloudinaryField('images')
     posted_at = models.DateTimeField(auto_now_add=True)
+    repository_url = models.CharField(max_length=200, blank=True)
+    live_url = models.CharField(max_length=200, blank=True)
     
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='projects')
 
@@ -41,4 +43,4 @@ class Review(models.Model):
     review_date = models.DateTimeField(auto_now_add=True)
 
     reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews')
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews')

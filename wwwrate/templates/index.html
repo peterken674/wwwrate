@@ -36,7 +36,7 @@
     <div class="top_of_week my-5 pt-4">
         <h4>Weekly Hall of Fame</h4>
         <hr>
-        <div class="projects d-flex justify-content-between">
+        <div class="projects d-flex">
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
@@ -53,7 +53,7 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <p class="name">GitHub Search</p>
+                        <a class="name" href="{% url 'project' project_id=1%}">GitHub Search</a>
                         <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus aut magni eveniet nemo voluptatem consequatur numquam...</p>
                     </div>
                     <img src="{% static 'img/gitsearch.png'%}" alt="">        
@@ -137,7 +137,7 @@
     <div class="top_of_week my-5 pt-4">
         <h4>Popular</h4>
         <hr>
-        <div class="projects d-flex justify-content-between">
+        <div class="projects d-flex">
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
