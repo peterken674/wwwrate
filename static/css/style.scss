@@ -26,11 +26,14 @@ li{
 }
 
 .auth-form-wrapper{
-    background-color: #F7F5F4;
+    background-color: white;
+
     .logo{
         font-family: 'Rum Raisin', cursive;
         font-size: 3rem;
         color: $primary-color;
+        text-decoration: none;
+        text-align: center;
     }
     .form{
         width: 100%;
@@ -41,7 +44,7 @@ li{
                 width: 100%;
                 padding: 0.5rem;
                 outline: none;
-                border: none;
+                border: .5px solid lightgrey;
                 background-color: #FFFFFF;
                 &::placeholder{
                     font-weight: 300;

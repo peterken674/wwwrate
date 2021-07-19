@@ -26,13 +26,15 @@ li {
 }
 
 .auth-form-wrapper {
-  background-color: #F7F5F4;
+  background-color: white;
 }
 
 .auth-form-wrapper .logo {
   font-family: 'Rum Raisin', cursive;
   font-size: 3rem;
   color: #C66085;
+  text-decoration: none;
+  text-align: center;
 }
 
 .auth-form-wrapper .form {
@@ -48,7 +50,7 @@ li {
   width: 100%;
   padding: 0.5rem;
   outline: none;
-  border: none;
+  border: .5px solid lightgrey;
   background-color: #FFFFFF;
 }
 

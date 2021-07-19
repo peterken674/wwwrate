@@ -1,4 +1,4 @@
-{% extends 'registration/base.html' %}
+{% extends 'auth/base.html' %}
 {% load bootstrap5 %}
 {% load static %}
 
@@ -31,6 +31,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    <hr>
     <p class="my-4">Have an account? <a href="{% url 'login'%}">Sign In</a></p>
 </form>
 
