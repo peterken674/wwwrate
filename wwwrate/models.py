@@ -19,6 +19,9 @@ class Profile(models.Model):
         if created:
             Profile.objects.create(user=instance)
 
+    def __str__(self):
+        return self.user.username
+
 class Project(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=500)
@@ -26,6 +29,9 @@ class Project(models.Model):
     posted_at = models.DateTimeField(auto_now_add=True)
     
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='projects')
+
+    def __str__(self):
+        return self.name
 
 class Review(models.Model):
     review = models.TextField(max_length=1000)

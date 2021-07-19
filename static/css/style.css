@@ -318,7 +318,7 @@ hr {
 
 #newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea {
   border-radius: 0;
-  border: 1px solid #C66085;
+  border: 1px solid lightgrey;
   outline: none;
 }
 

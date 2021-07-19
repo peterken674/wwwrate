@@ -1,11 +1,25 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import CreateUserForm
+from .forms import CreateUserForm, NewProjectForm
 from django.contrib import messages
 
 # Create your views here.
 def index(request):
-    context = {}
+
+    if request.method == 'POST':
+        upload_form = NewProjectForm(request.POST, request.FILES)
+        if upload_form.is_valid():
+            upload_form.instance.owner = request.user.profile
+            upload_form.save()
+
+            return redirect('index')
+
+    else:
+        upload_form = NewProjectForm()
+
+
+
+    context = {'upload_form': upload_form}
     return render(request, 'index.html', context)
 
 def login_user(request):
@@ -49,3 +63,4 @@ def register_user(request):
 def logout_user(request):
     logout(request)
     return redirect('login')
+

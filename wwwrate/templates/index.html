@@ -6,6 +6,7 @@
 {% block content %}
 
 <!-- MODAL -->
+<form action="{% url 'index'%}" method="POST" enctype="multipart/form-data" id="newProjectForm">
 <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -14,7 +15,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <!-- <form>
                   <div class="mb-3">
                     <label for="projectName" class="form-label">Project Name</label>
                     <input type="text" class="form-control" id="projectName" aria-describedby="projectNameHelp" required>
@@ -30,12 +31,15 @@
                     <div class="form-text" id="fileHelp">The best screenshot to append is often the landing page.</div>
                   </div>
                   <button type="button" class="btn btn-primary w-100">POST</button>
-                </form>
+                </form> -->
+                {% csrf_token %}
+                {% bootstrap_form upload_form%}
+                <button type="submit" class="btn btn-primary w-100">POST</button>
             </div>
         </div>
     </div>
 </div>
-
+</form>
 <!-- END OF MODAL -->
 
 <div class="container my-5 p-5 content_wrapper">
