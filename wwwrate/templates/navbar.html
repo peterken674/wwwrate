@@ -6,7 +6,7 @@
             {% if user.is_authenticated %}
             <li class="mx-4" data-bs-toggle="modal" data-bs-target="#newProjectModal"><a href="#">Submit Project</a>
             </li>
-            <li class="mx-4"><a href="#">My Profile ({{user.username}})</a></li>
+            <li class="mx-4"><a href="{% url 'profile'%}">My Profile ({{user.username}})</a></li>
             <li><a href="{% url 'logout'%}">Logout</a></li>
             {% else %}
             <li><a href="{% url 'login'%}">Sign In</a></li>
