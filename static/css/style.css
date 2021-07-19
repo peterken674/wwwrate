@@ -312,17 +312,21 @@ hr {
   border-radius: 0;
 }
 
-#newProjectModal .modal-dialog .modal-content .modal-header .modal-title {
+#newProjectModal .modal-dialog .modal-content .modal-header .modal-title,
+#updateProfileForm .modal-dialog .modal-content .modal-header .modal-title {
   color: #C66085;
 }
 
-#newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea {
+#newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea,
+#updateProfileForm .modal-dialog .modal-content .modal-body input,
+#updateProfileForm .modal-dialog .modal-content .modal-body textarea {
   border-radius: 0;
   border: 1px solid lightgrey;
   outline: none;
 }
 
-#newProjectModal .modal-dialog .modal-content .modal-body .btn {
+#newProjectModal .modal-dialog .modal-content .modal-body .btn,
+#updateProfileForm .modal-dialog .modal-content .modal-body .btn {
   background-color: #C66085;
   border-radius: 0;
   outline: none;

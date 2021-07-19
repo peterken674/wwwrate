@@ -8,11 +8,11 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    profile_pic = CloudinaryField('images', default='image/upload/v1626430054/default_zogkvr.png')
+    bio = models.TextField(max_length=1000, blank=True)
     role = models.CharField(max_length=150)
     github = models.CharField(max_length=200, blank=True)
     linkedin = models.CharField(max_length=200, blank=True)
-    bio = models.TextField(max_length=1000, blank=True)
+    profile_pic = CloudinaryField('images', default='image/upload/v1626430054/default_zogkvr.png')
 
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):

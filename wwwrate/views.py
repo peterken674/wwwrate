@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import CreateUserForm, NewProjectForm
+from .forms import CreateUserForm, NewProjectForm, UpdateProfileForm
 from django.contrib import messages
 
 # Create your views here.
@@ -67,7 +67,8 @@ def logout_user(request):
 
 def profile(request):
 
-    context = {}
+    update_form = UpdateProfileForm()
+    context = {'update_form':update_form}
     
     return render(request, 'profile.html', context)
 

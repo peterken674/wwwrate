@@ -4,29 +4,51 @@
 
 
 {% block content %}
+
+<!-- MODAL -->
+<form action="{% url 'profile'%}" method="POST" enctype="multipart/form-data" id="updateProfileForm">
+    <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase" id="updateProfileModalLabel"> Edit Profile </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% csrf_token %}
+                    {% bootstrap_form update_form%}
+                    <button type="submit" class="btn btn-primary w-100">POST</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- END OF MODAL -->
+
 <div class="container my-5 p-5 content_wrapper">
 
     <div class="profile">
-        <h3>Peter Kennedy</h3>
         <div class="d-flex mb-4">
             <div class="profile_pic">
-            <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+            <img src="{{user.profile.profile_pic.url}}" alt="">
         </div>
         <div class="details">
             <ul>
-                <li><strong>Full Name:</strong> Morgan Rotich</li>
-                <li><strong>Username:</strong> @rotich</li>
-                <li><strong>Role:</strong> Fullstack Software Developer</li>
-                <li><strong>Email:</strong> rotich@mail.com</li>
-                <li><strong>GitHub:</strong> https://www.github.com/rotich</li>
-                <li><strong>LinkedIn:</strong> <a href=""></a> https://www.linkedin.com/rotich</li>
+                <li><strong>Full Name:</strong> {{ user.first_name }} {{user.last_name}}</li>
+                <li><strong>Username:</strong> @{{ user.username }}</li>
+                <li><strong>Role:</strong> {{user.profile.role}}</li>
+                <li><strong>Email:</strong> {{user.email}}</li>
+                <li><strong>GitHub:</strong> {{user.profile.github}}</li>
+                <li><strong>LinkedIn:</strong> <a href=""></a> {{user.profile.linkedin}}</li>
             </ul>
         </div>
         </div>
-        <div class="btn btn-outline-primary my-4 rounded-0 text-uppercase">Edit Profile</div>
+        <div class="btn btn-outline-primary my-4 rounded-0 text-uppercase" data-bs-toggle="modal"
+            data-bs-target="#updateProfileModal">Edit Profile</div>
         <h4>Bio</h4>
         <hr>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.</p>
+        <p>{{ user.profile.bio }}</p>
         <h4>Projects</h4>
         <hr>
         <div class="projects d-flex justify-content-between">

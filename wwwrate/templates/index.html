@@ -15,23 +15,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- <form>
-                  <div class="mb-3">
-                    <label for="projectName" class="form-label">Project Name</label>
-                    <input type="text" class="form-control" id="projectName" aria-describedby="projectNameHelp" required>
-                    <div id="projectNameHelp" class="form-text">This name will appear on the homepage.</div>
-                  </div>
-                  <div class="mb-3">
-                      <label for="" class="form-label">Description</label>
-                      <textarea class="form-control" id="projectDescription" rows="3" required></textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="input1" class="form-label">Screenshot</label>
-                    <input class="form-control" type="file" id="input1" aria-describedby="fileHelp" required>
-                    <div class="form-text" id="fileHelp">The best screenshot to append is often the landing page.</div>
-                  </div>
-                  <button type="button" class="btn btn-primary w-100">POST</button>
-                </form> -->
                 {% csrf_token %}
                 {% bootstrap_form upload_form%}
                 <button type="submit" class="btn btn-primary w-100">POST</button>
