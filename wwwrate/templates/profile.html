@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+
+{% block content %}
+<div class="container my-5 p-5 content_wrapper">
+
+    <div class="profile">
+        <h3>Peter Kennedy</h3>
+        <div class="d-flex mb-4">
+            <div class="profile_pic">
+            <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+        </div>
+        <div class="details">
+            <ul>
+                <li><strong>Full Name:</strong> Morgan Rotich</li>
+                <li><strong>Username:</strong> @rotich</li>
+                <li><strong>Role:</strong> Fullstack Software Developer</li>
+                <li><strong>Email:</strong> rotich@mail.com</li>
+                <li><strong>GitHub:</strong> https://www.github.com/rotich</li>
+                <li><strong>LinkedIn:</strong> https://www.linkedin.com/rotich</li>
+            </ul>
+        </div>
+        </div>
+        <div class="btn btn-outline-primary my-4 rounded-0 text-uppercase">Edit Profile</div>
+        <h4>Bio</h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.</p>
+        <h4>Projects</h4>
+        <hr>
+        <div class="projects d-flex justify-content-between">
+            <div class="single_project my-3">
+                <div class="thumbnail position-relative">
+                    <div class="project_name position-absolute">
+                        <p class="rating">6.7</p>
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <p class="name">GitHub Search</p>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
+                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
+                    </div>
+                    <img src="{% static 'img/gitsearch.png'%}" alt="">
+                </div>
+                <div class="posted_by d-flex my-2">
+                    <div class="profilepic">
+                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+                    </div>
+                    <div class="username mx-3">
+                        <div class="fullname">Mogan Rotich</div>
+                        <p><em>Jul 17</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="single_project my-3">
+                <div class="thumbnail position-relative">
+                    <div class="project_name position-absolute">
+                        <p class="rating">6.7</p>
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <p class="name">GitHub Search</p>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
+                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
+                    </div>
+                    <img src="{% static 'img/gitsearch.png'%}" alt="">
+                </div>
+                <div class="posted_by d-flex my-2">
+                    <div class="profilepic">
+                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+                    </div>
+                    <div class="username mx-3">
+                        <div class="fullname">Mogan Rotich</div>
+                        <p><em>Jul 17</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="single_project my-3">
+                <div class="thumbnail position-relative">
+                    <div class="project_name position-absolute">
+                        <p class="rating">6.7</p>
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <p class="name">GitHub Search</p>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
+                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
+                    </div>
+                    <img src="{% static 'img/gitsearch.png'%}" alt="">
+                </div>
+                <div class="posted_by d-flex my-2">
+                    <div class="profilepic">
+                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+                    </div>
+                    <div class="username mx-3">
+                        <div class="fullname">Mogan Rotich</div>
+                        <p><em>Jul 17</em></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+        {% endblock %}

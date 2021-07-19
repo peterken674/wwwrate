@@ -21,6 +21,10 @@ a:hover {
   color: #883956;
 }
 
+li {
+  list-style: none;
+}
+
 .auth-form-wrapper {
   background-color: #F7F5F4;
 }
@@ -227,5 +231,38 @@ nav .nav-wrapper .menu ul li a {
 
 .single_project .posted_by .username .fullname {
   font-weight: 600;
+}
+
+.profile h3, .profile h4 {
+  color: #C66085;
+}
+
+.profile .profile_pic {
+  position: relative;
+  width: 30%;
+  overflow: hidden;
+}
+
+.profile .profile_pic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile .btn {
+  color: #C66085;
+  border: 1px solid #C66085;
+}
+
+.profile .btn:hover {
+  border: 1px solid #C66085;
+  background-color: #C66085;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -21,6 +21,9 @@ a{
         color: #883956;
     }
 }
+li{
+    list-style: none;
+}
 
 .auth-form-wrapper{
     background-color: #F7F5F4;
@@ -191,4 +194,35 @@ nav{
         }
     }
     
+}
+
+.profile{
+    h3,h4{
+        color: $primary-color;
+    }
+    .profile_pic{
+        position: relative;
+        width: 30%;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        
+    }
+    li {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .btn{
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        &:hover{
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            color: white;
+        }
+    }
 }
