@@ -55,7 +55,7 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <a class="name" href="{% url 'project' project_id=1%}">{{ project.name}}</a>
+                        <a class="name" href="{% url 'project' project_id=project.id%}">{{ project.name}}</a>
                         <p class="description">{{project.description | truncatechars:50}}</p>
                     </div>
                     <img src="{{project.screenshot.url}}" alt="">        
@@ -97,7 +97,7 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <a class="name" href="{% url 'project' project_id=1%}">{{ project.name}}</a>
+                        <a class="name" href="{% url 'project' project_id=project.id%}">{{ project.name}}</a>
                         <p class="description">{{project.description | truncatechars:50}}</p>
                     </div>
                     <img src="{{project.screenshot.url}}" alt="">

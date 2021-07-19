@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap5 %}
+{% load mathfilters %}
 
 
 {% block content %}
@@ -14,34 +15,34 @@
             </div>
             <div class="details">
                 <div class="project-overall-rating">
-                    <p>6.7</p>
+                    <p>{{ project.get_overall_average_rating }}</p>
                 </div>
                 <p>({{ project.reviews.count }} review{{ project.reviews.count | pluralize }}) </p>
                 <div class="category-rating">
                     <p>Design</p>
                     <div class="d-flex align-items-center">
                         <div class="ratingbar">
-                            <div class="bar" style="width: 84%;"></div>
+                            <div class="bar" style="width: {{project.get_average_design_rating | mul:10}}%;"></div>
                         </div>
-                        <small class="rating-prev mx-2">8.4</small>
+                        <small class="rating-prev mx-2">{{project.get_average_design_rating}}</small>
                     </div>
                 </div>
                 <div class="category-rating">
                     <p>Usability</p>
                     <div class="d-flex align-items-center">
                         <div class="ratingbar">
-                            <div class="bar" style="width: 76%;"></div>
+                            <div class="bar" style="width: {{project.get_average_usability_rating | mul:10}}%;"></div>
                         </div>
-                        <small class="rating-prev mx-2">7.6</small>
+                        <small class="rating-prev mx-2">{{project.get_average_usability_rating}}</small>
                     </div>
                 </div>
                 <div class="category-rating">
                     <p>Content</p>
                     <div class="d-flex align-items-center">
                         <div class="ratingbar">
-                            <div class="bar" style="width: 54%;"></div>
+                            <div class="bar" style="width: {{project.get_average_content_rating | mul:10}}%;"></div>
                         </div>
-                        <small class="rating-prev mx-2">5.4</small>
+                        <small class="rating-prev mx-2">{{project.get_average_content_rating}}</small>
                     </div>
                 </div>
             </div>
@@ -53,6 +54,7 @@
         </p>
         <h4>Reviews</h4>
         <hr>
+        {% if reviews %}
         {% for review in reviews %}
         <div class="stars">
             <div class="stars">
@@ -74,29 +76,10 @@
                 {{review.review_date | timesince}} ago.</em></small>
         <hr>
         {%endfor%}
-        <div class="stars">
-            <div class="stars">
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star-half'></i>
-                <i class='bx bx-star'></i>
-                <i class='bx bx-star'></i>
-                <i class='bx bx-star'></i>
-            </div>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in
-            repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.
-        </p>
-        <small><em>- Peter Ken, 5 days ago</em></small>
-        <hr>
-        <div class="links">
-            <a class="btn btn-primary text-uppercase repo-button" href="#">Repository<i class='mx-2 bx bx-link-external'></i></a>
-            <a class="btn btn-primary text-uppercase live-button" href="#">View<i class='mx-2 bx bx-link'></i></a>
-        </div>
+        {%else%}
+        <p>No reviews for this project yet.</p>
+        {% endif %}
+        
 
     </div>
 </div>
