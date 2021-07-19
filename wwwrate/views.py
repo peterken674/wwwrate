@@ -7,6 +7,7 @@ from .models import Project, Review
 # Create your views here.
 def index(request):
 
+    projects = Project.objects.all()
     if request.method == 'POST':
         upload_form = NewProjectForm(request.POST, request.FILES)
         if upload_form.is_valid():
@@ -20,7 +21,7 @@ def index(request):
 
 
 
-    context = {'upload_form': upload_form}
+    context = {'upload_form': upload_form, 'projects':projects}
     return render(request, 'index.html', context)
 
 def login_user(request):
@@ -68,7 +69,15 @@ def logout_user(request):
 
 def profile(request):
 
-    update_form = UpdateProfileForm()
+    my_projects = Project.objects.all().filter(owner=request.user.profile)
+
+    if request.method == 'POST':
+        update_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        if update_form.is_valid:
+            update_form.save()
+    else:
+        update_form = UpdateProfileForm()
+
     context = {'update_form':update_form}
     
     return render(request, 'profile.html', context)

@@ -37,6 +37,8 @@
         <h4>Weekly Hall of Fame</h4>
         <hr>
         <div class="projects d-flex">
+            <!-- Projects Loop -->
+            {% for project in projects%}
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
@@ -53,21 +55,23 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <a class="name" href="{% url 'project' project_id=1%}">GitHub Search</a>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus aut magni eveniet nemo voluptatem consequatur numquam...</p>
+                        <a class="name" href="{% url 'project' project_id=1%}">{{ project.name}}</a>
+                        <p class="description">{{project.description | truncatechars:80}}</p>
                     </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">        
+                    <img src="{{project.screenshot.url}}" alt="">        
                 </div>
                 <div class="posted_by d-flex my-2">
                     <div class="profilepic">
-                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+                        <img src="{{project.owner.profile_pic.url}}" alt="">
                     </div>
                     <div class="username mx-3">
-                        <div class="fullname">Mogan Rotich</div>
-                        <p><em>Jul 17</em></p>
+                        <div class="fullname">{{project.owner.user.first_name | title}} {{project.owner.user.last_name | title}}</div>
+                        <p><em>{{ project.posted_at | date}}</em></p>
                     </div>
                 </div>
             </div>
+            {% endfor %}
+            <!-- End of projects loop -->
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
