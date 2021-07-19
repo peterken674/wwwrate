@@ -266,3 +266,29 @@ hr{
     color: white !important;
     border-radius: 0;
 }
+
+#newProjectModal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header{
+                .modal-title{
+                    color: $primary-color;
+                }
+            }
+            .modal-body{
+                input, textarea{
+                    border-radius: 0;
+                    border: 1px solid $primary-color;
+                    outline: none;
+                }
+                .btn{
+                    background-color: $primary-color;
+                    border-radius: 0;
+                    outline: none;
+                    border: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

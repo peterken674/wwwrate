@@ -309,4 +309,22 @@ hr {
   color: white !important;
   border-radius: 0;
 }
+
+#newProjectModal .modal-dialog .modal-content .modal-header .modal-title {
+  color: #C66085;
+}
+
+#newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea {
+  border-radius: 0;
+  border: 1px solid #C66085;
+  outline: none;
+}
+
+#newProjectModal .modal-dialog .modal-content .modal-body .btn {
+  background-color: #C66085;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=style.css.map */
