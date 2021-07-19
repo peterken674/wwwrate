@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #C66085;
+  color: #c66079;
 }
 
 a:hover {
@@ -32,7 +32,7 @@ li {
 .auth-form-wrapper .logo {
   font-family: 'Rum Raisin', cursive;
   font-size: 3rem;
-  color: #C66085;
+  color: #c66079;
   text-decoration: none;
   text-align: center;
 }
@@ -71,14 +71,14 @@ li {
 }
 
 .auth-form-wrapper .form .btn {
-  background-color: #C66085;
-  border: 1px solid #C66085;
+  background-color: #c66079;
+  border: 1px solid #c66079;
   text-transform: uppercase;
   border-radius: 0;
 }
 
 nav {
-  background-color: #C66085;
+  background-color: #c66079;
   height: 80px;
 }
 
@@ -128,14 +128,14 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .content_wrapper .searchform form .btn {
-  background-color: #C66085;
-  border: 1px solid #C66085;
+  background-color: #c66079;
+  border: 1px solid #c66079;
   outline: none;
 }
 
 .content_wrapper .searchform form input {
   outline: none;
-  border: 1px solid #C66085;
+  border: 1px solid #c66079;
 }
 
 .projects {
@@ -169,7 +169,7 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .single_project .thumbnail .project_name {
-  background-color: #C66085;
+  background-color: #c66079;
   width: 100%;
   bottom: 0;
   height: 50px;
@@ -192,8 +192,8 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .single_project .thumbnail:hover .project_name {
-  background: -webkit-gradient(linear, left bottom, left top, from(#C66085), color-stop(#C66085), to(transparent));
-  background: linear-gradient(0deg, #C66085, #C66085, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#c66079), color-stop(#c66079), to(transparent));
+  background: linear-gradient(0deg, #c66079, #c66079, transparent);
   width: 100%;
   bottom: 0;
   height: 100%;
@@ -250,7 +250,7 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .profile h3, .profile h4 {
-  color: #C66085;
+  color: #c66079;
 }
 
 .profile .profile_pic {
@@ -272,13 +272,13 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .profile .btn {
-  color: #C66085;
-  border: 1px solid #C66085;
+  color: #c66079;
+  border: 1px solid #c66079;
 }
 
 .profile .btn:hover {
-  border: 1px solid #C66085;
-  background-color: #C66085;
+  border: 1px solid #c66079;
+  background-color: #c66079;
   color: white;
 }
 
@@ -291,7 +291,7 @@ nav .nav-wrapper .menu ul li a {
 
 .profile .details .project-overall-rating {
   font-size: 3rem;
-  color: #C66085;
+  color: #c66079;
   font-weight: 900;
 }
 
@@ -313,22 +313,22 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .stars {
-  color: #C66085;
+  color: #c66079;
 }
 
 hr {
-  color: #C66085;
+  color: #c66079;
 }
 
 .live-button, .repo-button {
-  background-color: #C66085;
+  background-color: #c66079;
   color: white !important;
   border-radius: 0;
 }
 
 #newProjectModal .modal-dialog .modal-content .modal-header .modal-title,
 #updateProfileForm .modal-dialog .modal-content .modal-header .modal-title {
-  color: #C66085;
+  color: #c66079;
 }
 
 #newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea,
@@ -341,7 +341,7 @@ hr {
 
 #newProjectModal .modal-dialog .modal-content .modal-body .btn,
 #updateProfileForm .modal-dialog .modal-content .modal-body .btn {
-  background-color: #C66085;
+  background-color: #c66079;
   border-radius: 0;
   outline: none;
   border: none;

@@ -16,7 +16,7 @@
                 <div class="project-overall-rating">
                     <p>6.7</p>
                 </div>
-                <p>({{ project.reviews.count }} reviews) </p>
+                <p>({{ project.reviews.count }} review{{ project.reviews.count | pluralize }}) </p>
                 <div class="category-rating">
                     <p>Design</p>
                     <div class="d-flex align-items-center">
@@ -53,6 +53,7 @@
         </p>
         <h4>Reviews</h4>
         <hr>
+        {% for review in reviews %}
         <div class="stars">
             <div class="stars">
                 <i class='bx bxs-star'></i>
@@ -67,11 +68,12 @@
                 <i class='bx bx-star'></i>
             </div>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in
-            repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.
+        <p>{{review.review}}
         </p>
-        <small><em>- Peter Ken, 2 hours ago.</em></small>
+        <small><em>- {{review.reviewer.user.first_name | title}} {{review.reviewer.user.last_name | title}},
+                {{review.review_date | timesince}} ago.</em></small>
         <hr>
+        {%endfor%}
         <div class="stars">
             <div class="stars">
                 <i class='bx bxs-star'></i>

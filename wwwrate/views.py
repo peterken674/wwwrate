@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import CreateUserForm, NewProjectForm, UpdateProfileForm
 from django.contrib import messages
-from .models import Project
+from .models import Project, Review
 
 # Create your views here.
 def index(request):
@@ -76,7 +76,8 @@ def profile(request):
 def project(request, project_id):
 
     project = Project.objects.get(id=project_id)
+    reviews = Review.objects.all().filter(project=project)
 
-    context = {'project': project}
+    context = {'project': project, 'reviews':reviews}
 
     return render(request, 'project.html', context)
