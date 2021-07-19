@@ -42,7 +42,7 @@
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
+                        <p class="rating">{{project.get_overall_average_rating}}</p>
                         <div class="stars">
                             <i class='bx bxs-star'></i>
                             <i class='bx bxs-star'></i>
@@ -56,7 +56,7 @@
                             <i class='bx bx-star'></i>
                         </div>
                         <a class="name" href="{% url 'project' project_id=1%}">{{ project.name}}</a>
-                        <p class="description">{{project.description | truncatechars:80}}</p>
+                        <p class="description">{{project.description | truncatechars:50}}</p>
                     </div>
                     <img src="{{project.screenshot.url}}" alt="">        
                 </div>
@@ -71,81 +71,20 @@
                 </div>
             </div>
             {% endfor %}
-            <!-- End of projects loop -->
-            <div class="single_project my-3">
-                <div class="thumbnail position-relative">
-                    <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
-                        <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus aut magni eveniet nemo voluptatem consequatur numquam...</p>
-                    </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">        
-                </div>
-                <div class="posted_by d-flex my-2">
-                    <div class="profilepic">
-                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
-                    </div>
-                    <div class="username mx-3">
-                        <div class="fullname">Mogan Rotich</div>
-                        <p><em>Jul 17</em></p>
-                    </div>
-                </div>
-            </div>
-            <div class="single_project my-3">
-                <div class="thumbnail position-relative">
-                    <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
-                        <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus aut magni eveniet nemo voluptatem consequatur numquam...</p>
-                    </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">        
-                </div>
-                <div class="posted_by d-flex my-2">
-                    <div class="profilepic">
-                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
-                    </div>
-                    <div class="username mx-3">
-                        <div class="fullname">Mogan Rotich</div>
-                        <p><em>Jul 17</em></p>
-                    </div>
-                </div>
-            </div>
-            
+            <!-- End of projects loop -->  
     </div>
 
 
     <div class="top_of_week my-5 pt-4">
         <h4>Popular</h4>
         <hr>
-        <div class="projects d-flex">
+        <div class="projects d-flex">.
+            <!-- Projects Loop -->
+            {% for project in projects%}
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
+                        <p class="rating">{{project.get_overall_average_rating }}</p>
                         <div class="stars">
                             <i class='bx bxs-star'></i>
                             <i class='bx bxs-star'></i>
@@ -158,86 +97,26 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
-                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
+                        <a class="name" href="{% url 'project' project_id=1%}">{{ project.name}}</a>
+                        <p class="description">{{project.description | truncatechars:50}}</p>
                     </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">
+                    <img src="{{project.screenshot.url}}" alt="">
                 </div>
                 <div class="posted_by d-flex my-2">
                     <div class="profilepic">
-                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
+                        <img src="{{project.owner.profile_pic.url}}" alt="">
                     </div>
                     <div class="username mx-3">
-                        <div class="fullname">Mogan Rotich</div>
-                        <p><em>Jul 17</em></p>
+                        <div class="fullname">{{project.owner.user.first_name | title}}
+                            {{project.owner.user.last_name | title}}</div>
+                        <p><em>{{ project.posted_at | date}}</em></p>
                     </div>
                 </div>
             </div>
-            <div class="single_project my-3">
-                <div class="thumbnail position-relative">
-                    <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
-                        <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
-                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
-                    </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">
-                </div>
-                <div class="posted_by d-flex my-2">
-                    <div class="profilepic">
-                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
-                    </div>
-                    <div class="username mx-3">
-                        <div class="fullname">Mogan Rotich</div>
-                        <p><em>Jul 17</em></p>
-                    </div>
-                </div>
-            </div>
-            <div class="single_project my-3">
-                <div class="thumbnail position-relative">
-                    <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
-                        <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
-                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
-                    </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">
-                </div>
-                <div class="posted_by d-flex my-2">
-                    <div class="profilepic">
-                        <img src="{% static 'img/MorganFreeman.jpg'%}" alt="">
-                    </div>
-                    <div class="username mx-3">
-                        <div class="fullname">Mogan Rotich</div>
-                        <p><em>Jul 17</em></p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+            <!-- End of projects loop -->
+            
+        
 
         </div>
     

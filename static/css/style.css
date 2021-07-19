@@ -144,15 +144,14 @@ nav .nav-wrapper .menu ul li a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .single_project {
   min-height: 200px;
   width: 30%;
   min-width: 200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .single_project .thumbnail {

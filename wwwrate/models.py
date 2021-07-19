@@ -32,6 +32,48 @@ class Project(models.Model):
     
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='projects')
 
+    @property
+    def get_average_design_rating(self):
+        reviews = Review.objects.all().filter(project=self)
+        design_ratings = []
+        for review in reviews:
+            design_ratings.append(review.design_rating)
+        if len(design_ratings) is not 0:
+            average_design_rating = sum(design_ratings)/len(design_ratings)
+        else:
+            average_design_rating = 0.0
+
+        return average_design_rating
+    @property
+    def get_average_usability_rating(self):
+        reviews = Review.objects.all().filter(project=self)
+        usability_ratings = []
+        for review in reviews:
+            usability_ratings.append(review.design_rating)
+        if len(usability_ratings) is not 0:
+            average_usability_rating = sum(usability_ratings)/len(usability_ratings)
+        else:
+            average_usability_rating = 0.0
+
+        return average_usability_rating
+    @property
+    def get_average_content_rating(self):
+        reviews = Review.objects.all().filter(project=self)
+        content_ratings = []
+        for review in reviews:
+            content_ratings.append(review.design_rating)
+        if len(content_ratings) is not 0:
+            average_content_rating = sum(content_ratings)/len(content_ratings)
+        else:
+            average_content_rating = 0.0
+
+        return average_content_rating
+
+    @property
+    def get_overall_average_rating(self):
+        return (self.get_average_design_rating + self.get_average_usability_rating + self.get_average_content_rating)/3
+
+
     def __str__(self):
         return self.name
 

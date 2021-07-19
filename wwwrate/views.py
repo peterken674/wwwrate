@@ -78,7 +78,7 @@ def profile(request):
     else:
         update_form = UpdateProfileForm()
 
-    context = {'update_form':update_form}
+    context = {'update_form':update_form, 'my_projects':my_projects}
     
     return render(request, 'profile.html', context)
 

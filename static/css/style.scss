@@ -113,13 +113,14 @@ nav{
 .projects{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 .single_project{
     min-height: 200px;
     width: 30%;
     min-width: 200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     .thumbnail{
         height: 100%;
         width: 100%;

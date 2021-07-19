@@ -52,6 +52,8 @@
         <h4>Projects</h4>
         <hr>
         <div class="projects d-flex justify-content-between">
+            <!-- My projects loop -->
+            {% for project in my_projects %}
             <div class="single_project my-3">
                 <div class="thumbnail position-relative">
                     <div class="project_name position-absolute">
@@ -68,63 +70,16 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
-                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
+                        <p class="name">{{project.name}}</p>
+                        <p class="description">{{project.description}}</p>
                     </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">
+                    <img src="{{project.screenshot.url}}" alt="">
                 </div>
                 
             </div>
-            <div class="single_project my-3">
-                <div class="thumbnail position-relative">
-                    <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
-                        <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
-                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
-                    </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">
-                </div>
-                
-            </div>
-            <div class="single_project my-3">
-                <div class="thumbnail position-relative">
-                    <div class="project_name position-absolute">
-                        <p class="rating">6.7</p>
-                        <div class="stars">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <p class="name">GitHub Search</p>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit id natus
-                            aut magni eveniet nemo voluptatem consequatur numquam...</p>
-                    </div>
-                    <img src="{% static 'img/gitsearch.png'%}" alt="">
-                </div>
-                
-            </div>
-
+            {%endfor%}
+            <!-- End my projects loop -->
+            
         </div>
         
     </div>
