@@ -226,3 +226,43 @@ nav{
         }
     }
 }
+
+.profile{
+    .details{
+        flex-grow: 1;
+        margin-left: 1rem;
+        .project-overall-rating{
+            font-size: 3rem;
+            color: $primary-color;
+            font-weight: 900;
+        }
+        .category-rating{
+            
+            .ratingbar{
+                margin-top: 0;
+                height: 5px;
+                width: 70%;
+                background-color: #F7F5F4;
+                .bar{
+                    background-color: #C66085;
+                    height: 100%;
+                }
+            }
+            &>p{
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.stars{
+    color: $primary-color;
+}
+hr{
+    color: $primary-color;
+}
+.live-button, .repo-button{
+    background-color: $primary-color;
+    color: white !important;
+    border-radius: 0;
+}

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+
+{% block content %}
+<div class="container my-5 p-5 content_wrapper">
+
+    <div class="profile">
+        <h3>GitHub Search</h3>
+        <div class="d-flex mb-4">
+            <div class="profile_pic">
+                <img src="{% static 'img/gitsearch.png'%}" alt="">
+            </div>
+            <div class="details">
+                <div class="project-overall-rating">
+                    <p>6.7</p>
+                </div>
+                <p>(3,423 reviews) </p>
+                <div class="category-rating">
+                    <p>Design</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ratingbar">
+                            <div class="bar" style="width: 84%;"></div>
+                        </div>
+                        <small class="rating-prev mx-2">8.4</small>
+                    </div>
+                </div>
+                <div class="category-rating">
+                    <p>Usability</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ratingbar">
+                            <div class="bar" style="width: 76%;"></div>
+                        </div>
+                        <small class="rating-prev mx-2">7.6</small>
+                    </div>
+                </div>
+                <div class="category-rating">
+                    <p>Content</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ratingbar">
+                            <div class="bar" style="width: 54%;"></div>
+                        </div>
+                        <small class="rating-prev mx-2">5.4</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-outline-primary my-4 rounded-0 text-uppercase">Add Review</div>
+        <h4>Description</h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in
+            repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.
+        </p>
+        <h4>Reviews</h4>
+        <hr>
+        <div class="stars">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+                <i class='bx bx-star'></i>
+                <i class='bx bx-star'></i>
+                <i class='bx bx-star'></i>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in
+            repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.
+        </p>
+        <small><em>- Peter Ken</em></small>
+        <hr>
+        <div class="stars">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+                <i class='bx bx-star'></i>
+                <i class='bx bx-star'></i>
+                <i class='bx bx-star'></i>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores id a quae. Dolores laudantium in
+            repudiandae sunt nulla tenetur esse, repellat libero harum repellendus, sit cupiditate omnis dicta possimus.
+        </p>
+        <small><em>- Peter Ken</em></small>
+        <hr>
+        <div class="links">
+            <a class="btn btn-primary text-uppercase repo-button" href="#">Repository<i class='mx-2 bx bx-link-external'></i></a>
+            <a class="btn btn-primary text-uppercase live-button" href="#">View<i class='mx-2 bx bx-link'></i></a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

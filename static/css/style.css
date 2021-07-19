@@ -265,4 +265,48 @@ nav .nav-wrapper .menu ul li a {
   background-color: #C66085;
   color: white;
 }
+
+.profile .details {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.profile .details .project-overall-rating {
+  font-size: 3rem;
+  color: #C66085;
+  font-weight: 900;
+}
+
+.profile .details .category-rating .ratingbar {
+  margin-top: 0;
+  height: 5px;
+  width: 70%;
+  background-color: #F7F5F4;
+}
+
+.profile .details .category-rating .ratingbar .bar {
+  background-color: #C66085;
+  height: 100%;
+}
+
+.profile .details .category-rating > p {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.stars {
+  color: #C66085;
+}
+
+hr {
+  color: #C66085;
+}
+
+.live-button, .repo-button {
+  background-color: #C66085;
+  color: white !important;
+  border-radius: 0;
+}
 /*# sourceMappingURL=style.css.map */

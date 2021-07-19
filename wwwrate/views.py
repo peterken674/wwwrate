@@ -6,7 +6,7 @@ from django.contrib import messages
 # Create your views here.
 def index(request):
     context = {}
-    return render(request, 'profile.html', context)
+    return render(request, 'project.html', context)
 
 def login_user(request):
     if request.user.is_authenticated:
