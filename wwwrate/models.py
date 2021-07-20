@@ -73,6 +73,9 @@ class Project(models.Model):
     def get_overall_average_rating(self):
         return round((self.get_average_design_rating + self.get_average_usability_rating + self.get_average_content_rating)/3,1)
 
+    class Meta:
+        ordering = ['posted_at']
+
 
     def __str__(self):
         return self.name
