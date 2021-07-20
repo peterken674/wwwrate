@@ -86,3 +86,7 @@ class Review(models.Model):
 
     reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews')
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews')
+
+    @property
+    def average_rating(self):
+        return int((self.design_rating + self.usability_rating + self.content_rating)/3)

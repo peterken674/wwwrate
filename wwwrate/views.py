@@ -3,8 +3,14 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import CreateUserForm, NewProjectForm, UpdateProfileForm
 from django.contrib import messages
 from .models import Project, Review
+from django.contrib.auth.decorators import login_required
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .models import Profile
+from .serializer import ProfileSerializer
 
 # Create your views here.
+@login_required(login_url='login')
 def index(request):
 
     projects = Project.objects.all()
@@ -66,7 +72,7 @@ def logout_user(request):
     logout(request)
     return redirect('login')
 
-
+@login_required(login_url='login')
 def profile(request):
 
     my_projects = Project.objects.all().filter(owner=request.user.profile)
@@ -90,3 +96,10 @@ def project(request, project_id):
     context = {'project': project, 'reviews':reviews}
 
     return render(request, 'project.html', context)
+
+class ProfileList(APIView):
+    def get(self, request, format=None):
+        all_profiles = Profile.objects.all()
+        serializers = ProfileSerializer(all_profiles, many=True)
+
+        return Response(serializers.data)

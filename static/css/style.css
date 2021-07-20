@@ -346,4 +346,15 @@ hr {
   border: none;
   text-transform: uppercase;
 }
+
+.content_wrapper > button {
+  border: 1px solid #c66079;
+  color: #c66079;
+}
+
+.content_wrapper > button:hover {
+  background-color: #c66079;
+  color: white;
+  border: 1px solid #c66079;
+}
 /*# sourceMappingURL=style.css.map */

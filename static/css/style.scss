@@ -306,3 +306,13 @@ hr{
         }
     }
 }
+
+.content_wrapper>button{
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    &:hover{
+        background-color: $primary-color;
+        color: white;
+        border: 1px solid $primary-color;
+    }
+}

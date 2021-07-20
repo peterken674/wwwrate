@@ -57,18 +57,8 @@
         {% if reviews %}
         {% for review in reviews %}
         <div class="stars">
-            <div class="stars">
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star-half'></i>
-                <i class='bx bx-star'></i>
-                <i class='bx bx-star'></i>
-                <i class='bx bx-star'></i>
-            </div>
+            <p><strong>Rating: {{review.average_rating}}</strong></p>
+            
         </div>
         <p>{{review.review}}
         </p>
