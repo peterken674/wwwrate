@@ -38,9 +38,10 @@
                 <li><strong>Full Name:</strong> {{ user.first_name }} {{user.last_name}}</li>
                 <li><strong>Username:</strong> @{{ user.username }}</li>
                 <li><strong>Role:</strong> {{user.profile.role}}</li>
-                <li><strong>Email:</strong> {{user.email}}</li>
-                <li><strong>GitHub:</strong> {{user.profile.github}}</li>
-                <li><strong>LinkedIn:</strong> <a href=""></a> {{user.profile.linkedin}}</li>
+                <li><strong>Email:</strong><a href="https://mailto:{{user.email}}"> {{user.email}}</a> </li>
+                <li><strong>GitHub:</strong> <a href="{{user.profile.github}}">{{user.profile.github}}</a></li>
+                <li><strong>LinkedIn:</strong><a href="{{user.profile.linkedin}}">
+                    {{user.profile.linkedin}}</a> </li>
             </ul>
         </div>
         </div>
