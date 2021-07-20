@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm, fields
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from .models import Profile, Project
+from .models import Profile, Project, Review
 
 class CreateUserForm(UserCreationForm):
     class Meta:
@@ -22,3 +22,8 @@ class UpdateProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         exclude = ['user']
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        exclude = ['reviewer', 'project']

@@ -70,8 +70,8 @@
                             <i class='bx bx-star'></i>
                             <i class='bx bx-star'></i>
                         </div>
-                        <p class="name">{{project.name}}</p>
-                        <p class="description">{{project.description}}</p>
+                        <a class="name" href="{% url 'project' project_id=project.id%}">{{ project.name}}</a>
+                        <p class="description">{{project.description | truncatechars:60}}</p>
                     </div>
                     <img src="{{project.screenshot.url}}" alt="">
                 </div>

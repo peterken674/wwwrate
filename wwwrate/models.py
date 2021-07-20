@@ -71,7 +71,7 @@ class Project(models.Model):
 
     @property
     def get_overall_average_rating(self):
-        return (self.get_average_design_rating + self.get_average_usability_rating + self.get_average_content_rating)/3
+        return round((self.get_average_design_rating + self.get_average_usability_rating + self.get_average_content_rating)/3,1)
 
 
     def __str__(self):
@@ -84,9 +84,9 @@ class Review(models.Model):
     content_rating = models.IntegerField()
     review_date = models.DateTimeField(auto_now_add=True)
 
-    reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews')
-    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews')
+    reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews', null=True)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='reviews', null=True)
 
     @property
     def average_rating(self):
-        return int((self.design_rating + self.usability_rating + self.content_rating)/3)
+        return round(((self.design_rating + self.usability_rating + self.content_rating)/3),1)

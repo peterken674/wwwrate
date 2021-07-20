@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #c66079;
+  color: #d6495c;
 }
 
 a:hover {
@@ -32,7 +32,7 @@ li {
 .auth-form-wrapper .logo {
   font-family: 'Rum Raisin', cursive;
   font-size: 3rem;
-  color: #c66079;
+  color: #d6495c;
   text-decoration: none;
   text-align: center;
 }
@@ -71,14 +71,14 @@ li {
 }
 
 .auth-form-wrapper .form .btn {
-  background-color: #c66079;
-  border: 1px solid #c66079;
+  background-color: #d6495c;
+  border: 1px solid #d6495c;
   text-transform: uppercase;
   border-radius: 0;
 }
 
 nav {
-  background-color: #c66079;
+  background-color: #d6495c;
   height: 80px;
 }
 
@@ -128,14 +128,14 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .content_wrapper .searchform form .btn {
-  background-color: #c66079;
-  border: 1px solid #c66079;
+  background-color: #d6495c;
+  border: 1px solid #d6495c;
   outline: none;
 }
 
 .content_wrapper .searchform form input {
   outline: none;
-  border: 1px solid #c66079;
+  border: 1px solid #d6495c;
 }
 
 .projects {
@@ -168,7 +168,7 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .single_project .thumbnail .project_name {
-  background-color: #c66079;
+  background-color: #d6495c;
   width: 100%;
   bottom: 0;
   height: 50px;
@@ -191,8 +191,8 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .single_project .thumbnail:hover .project_name {
-  background: -webkit-gradient(linear, left bottom, left top, from(#c66079), color-stop(#c66079), to(transparent));
-  background: linear-gradient(0deg, #c66079, #c66079, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#d6495c), color-stop(#d6495c), to(transparent));
+  background: linear-gradient(0deg, #d6495c, #d6495c, transparent);
   width: 100%;
   bottom: 0;
   height: 100%;
@@ -249,7 +249,7 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .profile h3, .profile h4 {
-  color: #c66079;
+  color: #d6495c;
 }
 
 .profile .profile_pic {
@@ -271,13 +271,13 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .profile .btn {
-  color: #c66079;
-  border: 1px solid #c66079;
+  color: #d6495c;
+  border: 1px solid #d6495c;
 }
 
 .profile .btn:hover {
-  border: 1px solid #c66079;
-  background-color: #c66079;
+  border: 1px solid #d6495c;
+  background-color: #d6495c;
   color: white;
 }
 
@@ -290,7 +290,7 @@ nav .nav-wrapper .menu ul li a {
 
 .profile .details .project-overall-rating {
   font-size: 3rem;
-  color: #c66079;
+  color: #d6495c;
   font-weight: 900;
 }
 
@@ -302,7 +302,7 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .profile .details .category-rating .ratingbar .bar {
-  background-color: #C66085;
+  background-color: #d6495c;
   height: 100%;
 }
 
@@ -312,35 +312,45 @@ nav .nav-wrapper .menu ul li a {
 }
 
 .stars {
-  color: #c66079;
+  color: #d6495c;
 }
 
 hr {
-  color: #c66079;
+  color: #d6495c;
 }
 
 .live-button, .repo-button {
-  background-color: #c66079;
+  background-color: #d6495c;
   color: white !important;
   border-radius: 0;
 }
 
+#newProjectModal,
+#updateProfileForm,
+#newProjectForm {
+  font-family: 'Roboto', sans-serif;
+}
+
 #newProjectModal .modal-dialog .modal-content .modal-header .modal-title,
-#updateProfileForm .modal-dialog .modal-content .modal-header .modal-title {
-  color: #c66079;
+#updateProfileForm .modal-dialog .modal-content .modal-header .modal-title,
+#newProjectForm .modal-dialog .modal-content .modal-header .modal-title {
+  color: #d6495c;
 }
 
 #newProjectModal .modal-dialog .modal-content .modal-body input, #newProjectModal .modal-dialog .modal-content .modal-body textarea,
 #updateProfileForm .modal-dialog .modal-content .modal-body input,
-#updateProfileForm .modal-dialog .modal-content .modal-body textarea {
+#updateProfileForm .modal-dialog .modal-content .modal-body textarea,
+#newProjectForm .modal-dialog .modal-content .modal-body input,
+#newProjectForm .modal-dialog .modal-content .modal-body textarea {
   border-radius: 0;
   border: 1px solid lightgrey;
   outline: none;
 }
 
 #newProjectModal .modal-dialog .modal-content .modal-body .btn,
-#updateProfileForm .modal-dialog .modal-content .modal-body .btn {
-  background-color: #c66079;
+#updateProfileForm .modal-dialog .modal-content .modal-body .btn,
+#newProjectForm .modal-dialog .modal-content .modal-body .btn {
+  background-color: #d6495c;
   border-radius: 0;
   outline: none;
   border: none;
@@ -348,13 +358,27 @@ hr {
 }
 
 .content_wrapper > button {
-  border: 1px solid #c66079;
-  color: #c66079;
+  border: 1px solid #d6495c;
+  color: #d6495c;
 }
 
 .content_wrapper > button:hover {
-  background-color: #c66079;
+  background-color: #d6495c;
   color: white;
-  border: 1px solid #c66079;
+  border: 1px solid #d6495c;
+}
+
+.live_link, .github_link {
+  color: #202020;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.live_link a, .github_link a {
+  font-size: 2rem;
+}
+
+.live_link:hover, .github_link:hover {
+  color: #d6495c;
 }
 /*# sourceMappingURL=style.css.map */

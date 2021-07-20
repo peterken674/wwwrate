@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import CreateUserForm, NewProjectForm, UpdateProfileForm
+from .forms import CreateUserForm, NewProjectForm, UpdateProfileForm, ReviewForm
 from django.contrib import messages
 from .models import Project, Review
 from django.contrib.auth.decorators import login_required
@@ -80,7 +80,7 @@ def profile(request):
 
     if request.method == 'POST':
         update_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
-        if update_form.is_valid:
+        if update_form.is_valid():
             update_form.save()
     else:
         update_form = UpdateProfileForm()
@@ -94,7 +94,18 @@ def project(request, project_id):
     project = Project.objects.get(id=project_id)
     reviews = Review.objects.all().filter(project=project)
 
-    context = {'project': project, 'reviews':reviews}
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST, request.FILES)
+        if review_form.is_valid():
+            review_form.instance.reviewer = request.user.profile
+            review_form.instance.project = project
+            review_form.save()
+
+    else:
+        review_form = ReviewForm()
+
+
+    context = {'project': project, 'reviews':reviews, 'review_form':review_form}
 
     return render(request, 'project.html', context)
 
