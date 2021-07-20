@@ -71,12 +71,16 @@
         <div id="reviewButton" class="btn btn-outline-primary my-4 rounded-0 text-uppercase" data-bs-toggle="modal"
             data-bs-target="#newReviewModal">Add Review</div>
         <div class="d-flex mb-2">
+            {%if project.live_url %}
             <div class="live_link">
                <a href="{{project.live_url}}" target="_blank"> <i class='bx bx-link-external'></i></a>
             </div>
+            {% endif %}
+            {% if project.repository_url %}
             <div class="github_link mx-3">
                <a href="{{project.repository_url}}" target=" _blank"><i class='bx bxl-github'></i></a>
             </div>
+            {% endif %}
         </div>
         <h4>Description</h4>
         <hr>
