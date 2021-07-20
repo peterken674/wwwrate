@@ -1,0 +1,1 @@
+web: gunicorn wwwrateproject.wsgi --log-file -
