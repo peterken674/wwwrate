@@ -8,5 +8,6 @@ urlpatterns = [
     path('accounts/logout/', views.logout_user, name='logout'),
     path('profile/', views.profile, name='profile'),
     path('project/<project_id>', views.project, name='project'),
-    path('api/profiles/', views.ProfileList.as_view())
+    path('api/profiles/', views.ProfileList.as_view()),
+    path('api/projects/', views.ProjectsList.as_view())
 ]
