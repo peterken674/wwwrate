@@ -27,14 +27,18 @@
 
 <div class="container my-5 p-5 content_wrapper">
     <div class="searchform my-2">
-        <form action="" method="post" class="d-flex">
+        <form action="{% url 'index'%}" method="POST" class="d-flex">
             <input class="form-control" type="text" name="search" id="search" placeholder="Search for a project...">
             <button class="btn btn-primary" type="submit"><i class='bx bx-search'></i></button>
         </form>
     </div>
 
+    {% if user.is_authenticated %}
     <button class="btn btn-outline-primary text-uppercase rounded-0 mt-4" data-bs-toggle="modal"
         data-bs-target="#newProjectModal">New <i class='bx bx-plus'></i></button>
+    {% else %}
+    <a class="btn btn-outline-secondary text-uppercase rounded-0 mt-4" href="{% url 'login'%}">New <i class='bx bx-plus'></i></a>
+    {% endif %}
 
     <div class="top_of_week my-5 pt-4">
         <h4>Projects</h4>

@@ -11,7 +11,7 @@ from .serializer import ProfileSerializer, ProjectsSerializer
 from wwwrate import serializer
 
 # Create your views here.
-@login_required(login_url='login')
+
 def index(request):
 
     projects = Project.objects.all()
@@ -30,6 +30,7 @@ def index(request):
 
     context = {'upload_form': upload_form, 'projects':projects}
     return render(request, 'index.html', context)
+
 
 def login_user(request):
     if request.user.is_authenticated:
