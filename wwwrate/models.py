@@ -38,7 +38,7 @@ class Project(models.Model):
         design_ratings = []
         for review in reviews:
             design_ratings.append(review.design_rating)
-        if len(design_ratings) is not 0:
+        if len(design_ratings) != 0:
             average_design_rating = sum(design_ratings)/len(design_ratings)
         else:
             average_design_rating = 0.0
@@ -50,7 +50,7 @@ class Project(models.Model):
         usability_ratings = []
         for review in reviews:
             usability_ratings.append(review.usability_rating)
-        if len(usability_ratings) is not 0:
+        if len(usability_ratings) != 0:
             average_usability_rating = sum(usability_ratings)/len(usability_ratings)
         else:
             average_usability_rating = 0.0
@@ -62,7 +62,7 @@ class Project(models.Model):
         content_ratings = []
         for review in reviews:
             content_ratings.append(review.content_rating)
-        if len(content_ratings) is not 0:
+        if len(content_ratings) != 0:
             average_content_rating = sum(content_ratings)/len(content_ratings)
         else:
             average_content_rating = 0.0
