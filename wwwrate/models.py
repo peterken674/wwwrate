@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from django.core.validators import MaxValueValidator
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -82,9 +82,9 @@ class Project(models.Model):
 
 class Review(models.Model):
     review = models.TextField(max_length=1000)
-    design_rating = models.IntegerField()
-    usability_rating = models.IntegerField()
-    content_rating = models.IntegerField()
+    design_rating = models.PositiveIntegerField(default=10)
+    usability_rating = models.PositiveIntegerField(default=10)
+    content_rating = models.PositiveIntegerField(default=10)
     review_date = models.DateTimeField(auto_now_add=True)
 
     reviewer = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='reviews', null=True)
