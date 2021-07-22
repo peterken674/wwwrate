@@ -43,7 +43,7 @@ class Project(models.Model):
         else:
             average_design_rating = 0.0
 
-        return average_design_rating
+        return round(average_design_rating, 1)
     @property
     def get_average_usability_rating(self):
         reviews = Review.objects.all().filter(project=self)
@@ -55,7 +55,7 @@ class Project(models.Model):
         else:
             average_usability_rating = 0.0
 
-        return average_usability_rating
+        return round(average_usability_rating, 1)
     @property
     def get_average_content_rating(self):
         reviews = Review.objects.all().filter(project=self)
@@ -67,7 +67,7 @@ class Project(models.Model):
         else:
             average_content_rating = 0.0
 
-        return average_content_rating
+        return round(average_content_rating, 1)
 
     @property
     def get_overall_average_rating(self):
